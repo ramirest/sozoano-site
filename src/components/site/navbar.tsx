@@ -4,6 +4,7 @@ import { ThemeToggle } from "@/components/site/theme-toggle";
 
 const links = [
   { href: "/sobre-o-livro", label: "Sobre o Livro" },
+  { href: "/sobre-o-autor", label: "Sobre o autor" },
   { href: "/devocionais", label: "Devocionais" },
   { href: "/loja", label: "Loja" },
   { href: "/lancamento", label: "Lançamento" },

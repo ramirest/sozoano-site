@@ -18,7 +18,7 @@ export default async function HomePage() {
           message: String(entry.message),
         }))}
       />
-      <AuthorSection />
+      <AuthorSection variant="improvavel" />
     </>
   );
 }
