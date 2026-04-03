@@ -49,7 +49,7 @@ export const fallbackCharacters = [
     name: "Moisés",
     title: "A voz na sarça ardente",
     summary: "Quando a insegurança queimou, o chamado permaneceu.",
-    chapter: 1,
+    chapter: 2,
     symbol: "Sarça ardente",
     lesson: "Deus não escolhe o mais eloquente, escolhe quem decide obedecer.",
     sensoryNarrative:
@@ -60,7 +60,7 @@ export const fallbackCharacters = [
     name: "Gideão",
     title: "Do medo para a coragem",
     summary: "Mesmo escondido, ele foi encontrado pelo céu.",
-    chapter: 2,
+    chapter: 3,
     symbol: "Velo molhado",
     lesson: "Quando Deus confirma, até o medo aprende a marchar.",
     sensoryNarrative:
@@ -71,7 +71,7 @@ export const fallbackCharacters = [
     name: "Davi",
     title: "Cinco pedras e uma convicção",
     summary: "No vale, a fé acertou antes da funda.",
-    chapter: 3,
+    chapter: 4,
     symbol: "Funda de pastor",
     lesson: "Quem carrega aliança não negocia com gigantes.",
     sensoryNarrative:
@@ -82,7 +82,7 @@ export const fallbackCharacters = [
     name: "Rute",
     title: "Fidelidade que abre campos",
     summary: "Onde faltava futuro, Deus semeou recomeço.",
-    chapter: 4,
+    chapter: 5,
     symbol: "Espigas no campo",
     lesson: "Lealdade em tempos duros sempre encontra redenção.",
     sensoryNarrative:
@@ -93,10 +93,21 @@ export const fallbackCharacters = [
     name: "Zaqueu",
     title: "Quando Jesus chama pelo nome",
     summary: "A curiosidade subiu na árvore; a salvação desceu para casa.",
-    chapter: 5,
+    chapter: 6,
     symbol: "Sicômoro",
     lesson: "O encontro com Cristo redefine identidade e caminho.",
     sensoryNarrative:
       "A multidão empurrava, o calor era denso e o cheiro de rua subia com poeira e suor. No alto da árvore, Zaqueu respirava curto tentando enxergar. Então veio a voz, firme e afetuosa, atravessando o barulho da cidade. Naquele segundo, ele percebeu que Deus o via por inteiro.",
+  },
+  {
+    slug: "maria-mae-de-jesus",
+    name: "Maria",
+    title: "A mãe de Jesus",
+    summary: "Em Nazaré, uma jovem simples recebe um chamado que atravessa a história.",
+    chapter: 7,
+    symbol: "Nazaré",
+    lesson: "A coragem silenciosa da obediência pode carregar promessas eternas.",
+    sensoryNarrative:
+      "Maria vivia em Nazaré, entre a simplicidade da rotina e as expectativas de sua época. Em meio ao cheiro de pão assando e à luz suave da manhã, sua história toma um rumo improvável: uma jovem comum, em um tempo de opressão, chamada para participar de algo maior que ela mesma.",
   },
 ];

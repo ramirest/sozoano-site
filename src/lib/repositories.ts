@@ -31,7 +31,21 @@ export async function getCharacters() {
   try {
     await connectToDatabase();
     const characters = await Character.find({}).sort({ chapter: 1 }).lean();
-    return characters.length ? characters : fallbackCharacters;
+    if (!characters.length) return fallbackCharacters;
+
+    const mergedBySlug = new Map<string, (typeof fallbackCharacters)[number]>();
+
+    for (const character of characters) {
+      mergedBySlug.set(String(character.slug), character as (typeof fallbackCharacters)[number]);
+    }
+
+    for (const fallbackCharacter of fallbackCharacters) {
+      if (!mergedBySlug.has(fallbackCharacter.slug)) {
+        mergedBySlug.set(fallbackCharacter.slug, fallbackCharacter);
+      }
+    }
+
+    return Array.from(mergedBySlug.values()).sort((a, b) => Number(a.chapter) - Number(b.chapter));
   } catch {
     return fallbackCharacters;
   }
