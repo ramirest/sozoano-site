@@ -23,7 +23,7 @@ const chapters = [
   number: index + 1,
   title,
   excerpt:
-    "Meu camarada, aqui você sente o cheiro da estrada, escuta a respiração de quem quase desistiu e vê Deus transformando poeira em promessa. Este capítulo é um convite para você se enxergar dentro da narrativa.",
+    "Aqui você sente o cheiro da estrada, escuta a respiração de quem quase desistiu e vê Deus transformando poeira em promessa. Este capítulo é um convite para você se enxergar dentro da narrativa.",
 }));
 
 export default function SobreOLivroPage() {

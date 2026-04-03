@@ -12,7 +12,7 @@ export default function ComunidadePage() {
       <article className="rounded-2xl border border-primary/20 bg-secondary/30 p-6">
         <h1 className="font-heading text-5xl">Comunidade Sozoano</h1>
         <p className="mt-4 text-foreground/80">
-          Meu camarada, você não precisa caminhar sozinho. A comunidade é o lugar onde fé, amizade e propósito se
+          Você não precisa caminhar sozinho. A comunidade é o lugar onde fé, amizade e propósito se
           encontram todos os dias.
         </p>
 

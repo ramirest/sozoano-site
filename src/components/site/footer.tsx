@@ -7,7 +7,7 @@ export function Footer() {
         <div>
           <h3 className="font-heading text-2xl golden-text">Sozoano – O Improvável</h3>
           <p className="mt-2 max-w-lg text-sm text-foreground/75">
-            Meu camarada, esta casa foi feita para lembrar você de uma verdade: Deus transforma o improvável em extraordinário.
+            Esta casa foi feita para lembrar você de uma verdade: Deus transforma o improvável em extraordinário.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-2 text-sm md:justify-items-end">

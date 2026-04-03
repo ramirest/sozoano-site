@@ -3,7 +3,7 @@ export const fallbackTestimonials = [
     name: "Ana Paula",
     city: "Recife - PE",
     message:
-      "Meu camarada, eu cheguei no fundo do poço emocional. Esse livro me fez respirar de novo e acreditar que Deus ainda escrevia meu capítulo.",
+      "Eu cheguei no fundo do poço emocional. Esse livro me fez respirar de novo e acreditar que Deus ainda escrevia meu capítulo.",
   },
   {
     name: "João Victor",

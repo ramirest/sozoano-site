@@ -12,7 +12,7 @@ export default function MinhaHistoriaPage() {
       <p className="text-sm uppercase tracking-[0.25em] text-accent">Seu testemunho importa</p>
       <h1 className="mt-2 font-heading text-5xl">Minha história improvável</h1>
       <p className="mt-4 text-foreground/80">
-        Meu camarada, esse espaço é seu. Fala com sinceridade, sem filtro, com fé e verdade. Sua história pode ser o
+        Esse espaço é seu. Fala com sinceridade, sem filtro, com fé e verdade. Sua história pode ser o
         abraço que alguém está pedindo em oração hoje.
       </p>
 

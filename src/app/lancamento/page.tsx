@@ -13,7 +13,7 @@ export default function LancamentoPage() {
         <p className="text-sm uppercase tracking-[0.3em] text-accent">Lançamento oficial</p>
         <h1 className="mt-3 font-heading text-5xl md:text-6xl">Sozoano – O Improvável</h1>
         <p className="mt-5 max-w-3xl text-lg text-foreground/85">
-          Meu camarada, se você sente que já tentou de tudo e mesmo assim não saiu do lugar, esse livro foi escrito para
+          Se você sente que já tentou de tudo e mesmo assim não saiu do lugar, esse livro foi escrito para
           você. É a rota da esperança para quem cansou de se achar pequeno.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-4">

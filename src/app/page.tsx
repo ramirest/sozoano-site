@@ -1,6 +1,7 @@
 import { CharacterGrid } from "@/components/home/character-grid";
 import { BurningBushHero } from "@/components/home/burning-bush-hero";
 import { TestimonialsCarousel } from "@/components/home/testimonials-carousel";
+import { AuthorSection } from "@/components/site/author-section";
 import { getTestimonials } from "@/lib/repositories";
 
 export default async function HomePage() {
@@ -17,6 +18,7 @@ export default async function HomePage() {
           message: String(entry.message),
         }))}
       />
+      <AuthorSection />
     </>
   );
 }

@@ -39,7 +39,7 @@ export function StoryForm() {
         name="story"
         required
         rows={7}
-        placeholder="Me conta, meu camarada: qual improvável Deus começou a transformar em você?"
+        placeholder="Me conta, de coração: qual improvável Deus começou a transformar em você?"
         className="w-full rounded-xl border border-primary/30 bg-background/60 px-4 py-3"
       />
       <label className="flex items-center gap-2 text-sm text-foreground/85">

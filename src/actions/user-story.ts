@@ -42,7 +42,7 @@ export async function submitUserStory(
     return {
       success: true,
       message:
-        "Meu camarada, sua história foi recebida com carinho. Ela já está no forno da esperança e pode aparecer em nossos depoimentos após moderação.",
+        "Sua história foi recebida com carinho. Ela já está no forno da esperança e pode aparecer em nossos depoimentos após moderação.",
     };
   } catch {
     return {

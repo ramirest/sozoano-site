@@ -50,7 +50,7 @@ export function BurningBushHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            Meu camarada, chega mais perto. Respira fundo e deixa essa história lembrar sua alma de algo simples:
+            Chega mais perto. Respira fundo e deixa essa história lembrar sua alma de algo simples:
             Deus ainda chama gente comum para viver capítulos extraordinários.
           </motion.p>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
