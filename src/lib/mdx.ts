@@ -39,3 +39,8 @@ export async function getMdxDevocionais(): Promise<MdxDevocional[]> {
     return [];
   }
 }
+
+export async function getMdxDevocionalBySlug(slug: string): Promise<MdxDevocional | null> {
+  const devocionais = await getMdxDevocionais();
+  return devocionais.find((entry) => entry.slug === slug) ?? null;
+}

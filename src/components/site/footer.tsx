@@ -20,6 +20,9 @@ export function Footer() {
           <Link href="/devocionais" className="hover:text-primary">
             Devocionais
           </Link>
+          <Link href="/quiropraxia" className="hover:text-primary">
+            Quiropraxia
+          </Link>
           <Link href="/comunidade" className="hover:text-primary">
             Comunidade
           </Link>

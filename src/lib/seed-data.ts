@@ -19,27 +19,49 @@ export const fallbackTestimonials = [
   },
 ];
 
-export const fallbackProducts = [
+export type FallbackProduct = {
+  _id?: string;
+  slug: string;
+  title: string;
+  description: string;
+  price: number;
+  image: string;
+  category: string;
+  sizes: string[];
+  colors: string[];
+  checkoutUrl?: string;
+};
+
+export const fallbackProducts: FallbackProduct[] = [
   {
+    slug: "camiseta-eu-sou-sozoano",
     title: "Camiseta Eu Sou Sozoano",
     description: "Malha premium, estampa dourada e frase oficial do movimento.",
     price: 89.9,
     image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200",
-    checkoutUrl: "https://hotmart.com",
+    category: "camiseta",
+    sizes: ["P", "M", "G", "GG"],
+    colors: [],
   },
   {
+    slug: "caneca-sozoano",
     title: "Caneca Sozoano",
     description: "Cerâmica fosca com acabamento areia e interior fogo.",
     price: 59.9,
     image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=1200",
-    checkoutUrl: "https://hotmart.com",
+    category: "acessorio",
+    sizes: [],
+    colors: [],
   },
   {
+    slug: "pulseira-o-improvavel",
     title: "Pulseira O Improvável",
     description: "Pulseira minimalista com gravação da promessa central do livro.",
     price: 39.9,
     image: "https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=1200",
-    checkoutUrl: "https://hotmart.com",
+    category: "acessorio",
+    sizes: [],
+    colors: [],
   },
 ];
 
@@ -109,5 +131,49 @@ export const fallbackCharacters = [
     lesson: "A coragem silenciosa da obediência pode carregar promessas eternas.",
     sensoryNarrative:
       "Maria vivia em Nazaré, entre a simplicidade da rotina e as expectativas de sua época. Em meio ao cheiro de pão assando e à luz suave da manhã, sua história toma um rumo improvável: uma jovem comum, em um tempo de opressão, chamada para participar de algo maior que ela mesma.",
+  },
+  {
+    slug: "paulo",
+    name: "Paulo",
+    title: "O Perseguidor Convertido",
+    summary: "No meio do caminho, a luz interrompeu a fúria e reescreveu a missão.",
+    chapter: 8,
+    symbol: "Estrada de Damasco",
+    lesson: "Nenhuma convicção errada resiste a um encontro verdadeiro com a graça.",
+    sensoryNarrative:
+      "A poeira da estrada subia com o trote das montarias, e Saulo apertava as cartas de autorização como quem carrega uma sentença. Então o meio-dia rasgou-se em luz. O chão veio de encontro aos joelhos, os olhos arderam até escurecer, e no silêncio ensurdecedor uma voz chamou pelo nome. Ali, entre a cegueira e a verdade, o perseguidor começou a virar apóstolo.",
+  },
+  {
+    slug: "ester",
+    name: "Ester",
+    title: "A Rainha Corajosa",
+    summary: "Uma órfã exilada posicionada por Deus para salvar um povo inteiro.",
+    chapter: 9,
+    symbol: "Cetro estendido",
+    lesson: "Talvez seja exatamente para uma hora como esta que você chegou até aqui.",
+    sensoryNarrative:
+      "O salão do palácio cheirava a mirra e a poder. Cada passo de Ester ecoava no mármore como um tambor de guerra silencioso: aproximar-se do rei sem ser chamada era pedir a morte. Ela respirou fundo, sentiu o peso da coroa e o peso maior do seu povo, e avançou. Quando o cetro de ouro se estendeu na direção dela, o improvável virou livramento.",
+  },
+  {
+    slug: "pedro",
+    name: "Pedro",
+    title: "O Discípulo Imperfeito",
+    summary: "Entre quedas e recomeços, um pescador aprendeu a firmar os pés na fé.",
+    chapter: 10,
+    symbol: "Rede e mar aberto",
+    lesson: "Deus não desiste de quem cai; Ele restaura quem se levanta e volta a amar.",
+    sensoryNarrative:
+      "O cheiro de sal e peixe morava nas mãos calejadas de Pedro. Ele conhecia o humor do mar, mas nada o preparou para andar sobre ele — nem para afundar, nem para o galo cortar a madrugada depois da negação. Na praia, sobre brasas e pão, a pergunta veio três vezes: 'Tu me amas?'. E três vezes o perdão reconstruiu o que o medo havia quebrado.",
+  },
+  {
+    slug: "mulheres-no-ministerio",
+    name: "As Mulheres no Ministério",
+    title: "Força que abre caminhos",
+    summary: "Das matriarcas às discípulas, a presença feminina sustentou a história da fé.",
+    chapter: 11,
+    symbol: "Vaso de alabastro",
+    lesson: "Vocação não tem gênero: tem entrega, coragem e legado.",
+    sensoryNarrative:
+      "O perfume do nardo derramado encheu a casa e atravessou os séculos. Débora julgou debaixo da palmeira, Rute recolheu espigas, Maria guardou promessas no coração, e as mulheres foram as primeiras a anunciar o túmulo vazio. Em cada gesto — um vaso quebrado, um caminho aberto, uma madrugada de coragem — Deus escreveu capítulos que ninguém esperava.",
   },
 ];

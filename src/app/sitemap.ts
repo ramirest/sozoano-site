@@ -13,6 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/devocionais",
     "/loja",
     "/lancamento",
+    "/quiropraxia",
     "/comunidade",
   ];
 

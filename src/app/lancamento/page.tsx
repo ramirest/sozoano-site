@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LaunchCountdown } from "@/components/site/launch-countdown";
 
 export const metadata: Metadata = {
   title: "Lançamento",
@@ -12,6 +13,9 @@ export default function LancamentoPage() {
       <article className="rounded-3xl border border-primary/25 bg-secondary/30 p-8 md:p-12">
         <p className="text-sm uppercase tracking-[0.3em] text-accent">Lançamento oficial</p>
         <h1 className="mt-3 font-heading text-5xl md:text-6xl">Sozoano – O Improvável</h1>
+        <div className="mt-6">
+          <LaunchCountdown />
+        </div>
         <p className="mt-5 max-w-3xl text-lg text-foreground/85">
           Se você sente que já tentou de tudo e mesmo assim não saiu do lugar, esse livro foi escrito para
           você. É a rota da esperança para quem cansou de se achar pequeno.

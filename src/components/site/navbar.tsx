@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Flame } from "lucide-react";
+import { MobileMenu } from "@/components/site/mobile-menu";
 import { ThemeToggle } from "@/components/site/theme-toggle";
 
 const links = [
@@ -8,13 +9,14 @@ const links = [
   { href: "/devocionais", label: "Devocionais" },
   { href: "/loja", label: "Loja" },
   { href: "/lancamento", label: "Lançamento" },
+  { href: "/quiropraxia", label: "Quiropraxia" },
   { href: "/comunidade", label: "Comunidade" },
 ];
 
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-primary/20 bg-background/70 backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 md:px-6">
+      <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Flame className="size-5 text-primary" />
           <span className="font-heading text-lg font-semibold text-foreground">Sozoano</span>
@@ -40,6 +42,7 @@ export function Navbar() {
           >
             Descubra sua história
           </Link>
+          <MobileMenu links={links} />
         </div>
       </div>
     </header>

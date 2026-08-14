@@ -5,25 +5,53 @@ import { Character } from "../src/models/Character";
 import { Product } from "../src/models/Product";
 import { Testimonial } from "../src/models/Testimonial";
 
+// Seed NÃO destrutivo: faz upsert por chave natural (slug/nome) e nunca apaga
+// conteúdo existente — seguro para rodar contra o banco de produção.
 async function seed() {
   await connectToDatabase();
 
   await Promise.all([
-    Testimonial.deleteMany({}),
-    Product.deleteMany({}),
-    Character.deleteMany({}),
+    Character.bulkWrite(
+      fallbackCharacters.map((character) => ({
+        updateOne: {
+          filter: { slug: character.slug },
+          update: { $set: character },
+          upsert: true,
+        },
+      })),
+    ),
+    Product.bulkWrite(
+      fallbackProducts.map((entry) => {
+        const product = { ...entry };
+        delete product._id;
+
+        return {
+          updateOne: {
+            filter: { slug: product.slug },
+            update: {
+              $set: product,
+              $setOnInsert: { active: true },
+            },
+            upsert: true,
+          },
+        };
+      }),
+    ),
+    Testimonial.bulkWrite(
+      fallbackTestimonials.map((testimonial) => ({
+        updateOne: {
+          filter: { name: testimonial.name, message: testimonial.message },
+          update: { $set: { ...testimonial, approved: true, featured: true } },
+          upsert: true,
+        },
+      })),
+    ),
   ]);
 
-  await Promise.all([
-    Testimonial.insertMany(fallbackTestimonials.map((entry) => ({ ...entry, approved: true, featured: true }))),
-    Product.insertMany(fallbackProducts.map((entry) => ({ ...entry, active: true }))),
-    Character.insertMany(fallbackCharacters),
-  ]);
+  const hash = await bcrypt.hash(process.env.SEED_ADMIN_PASSWORD || "123456", 10);
 
-  const hash = await bcrypt.hash("123456", 10);
-
-  console.log("✅ Seed concluído com sucesso.");
-  console.log("ADMIN_EMAIL=admin@sozoano.com");
+  console.log("✅ Seed concluído com sucesso (upsert, sem apagar dados).");
+  console.log("Se precisar de um novo hash de senha admin:");
   console.log(`ADMIN_PASSWORD_HASH=${hash}`);
 }
 

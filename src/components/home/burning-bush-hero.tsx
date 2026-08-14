@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useMemo } from "react";
+import { LaunchCountdown } from "@/components/site/launch-countdown";
 import { buttonVariants } from "@/components/ui/button";
 
 export function BurningBushHero() {
@@ -60,6 +61,9 @@ export function BurningBushHero() {
             >
               Descubra sua história
             </Link>
+          </motion.div>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+            <LaunchCountdown />
           </motion.div>
         </div>
 

@@ -1,3 +1,4 @@
+import { CareBanner } from "@/components/home/care-banner";
 import { CharacterGrid } from "@/components/home/character-grid";
 import { BurningBushHero } from "@/components/home/burning-bush-hero";
 import { TestimonialsCarousel } from "@/components/home/testimonials-carousel";
@@ -19,6 +20,7 @@ export default async function HomePage() {
         }))}
       />
       <AuthorSection variant="improvavel" />
+      <CareBanner />
     </>
   );
 }
