@@ -5,7 +5,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
   const characters = await getCharacters();
 
-  const staticRoutes = ["", "/sobre-o-livro", "/minha-historia", "/devocionais", "/loja", "/lancamento", "/comunidade"];
+  const staticRoutes = [
+    "",
+    "/sobre-o-livro",
+    "/sobre-o-autor",
+    "/minha-historia",
+    "/devocionais",
+    "/loja",
+    "/lancamento",
+    "/comunidade",
+  ];
 
   return [
     ...staticRoutes.map((route) => ({

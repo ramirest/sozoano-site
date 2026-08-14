@@ -52,5 +52,20 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   session: {
     strategy: "jwt",
   },
+  callbacks: {
+    jwt({ token, user }) {
+      // Marca como admin quem autenticar com o e-mail administrativo configurado.
+      if (user?.email && user.email === process.env.ADMIN_EMAIL) {
+        token.isAdmin = true;
+      }
+      return token;
+    },
+    session({ session, token }) {
+      if (session.user) {
+        session.user.isAdmin = Boolean(token.isAdmin);
+      }
+      return session;
+    },
+  },
   trustHost: true,
 });

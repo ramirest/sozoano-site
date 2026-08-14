@@ -14,6 +14,15 @@ export function StoryForm() {
 
   return (
     <form action={formAction} className="space-y-4 rounded-3xl border border-primary/20 bg-secondary/30 p-6">
+      {/* Honeypot anti-spam: invisível para humanos, bots costumam preencher. */}
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
       <div className="grid gap-4 md:grid-cols-2">
         <input
           name="name"

@@ -1,6 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { headers } from "next/headers";
 import { z } from "zod";
 import { connectToDatabase } from "@/lib/mongodb";
 import { UserStory } from "@/models/UserStory";
@@ -18,10 +19,44 @@ export type UserStoryState = {
   message: string;
 };
 
+// Rate limit simples em memória (por instância) para conter abuso do formulário público.
+const submissionLog = new Map<string, number[]>();
+const WINDOW_MS = 60 * 60 * 1000;
+const MAX_PER_WINDOW = 3;
+
+function isRateLimited(ip: string) {
+  const now = Date.now();
+  const recent = (submissionLog.get(ip) ?? []).filter((time) => now - time < WINDOW_MS);
+
+  if (recent.length >= MAX_PER_WINDOW) {
+    submissionLog.set(ip, recent);
+    return true;
+  }
+
+  recent.push(now);
+  submissionLog.set(ip, recent);
+  return false;
+}
+
 export async function submitUserStory(
   _prevState: UserStoryState,
   formData: FormData,
 ): Promise<UserStoryState> {
+  // Honeypot: campo invisível para humanos. Preenchido = bot; respondemos sucesso sem gravar.
+  if (formData.get("website")) {
+    return { success: true, message: "Sua história foi recebida com carinho." };
+  }
+
+  const headerList = await headers();
+  const ip = headerList.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+
+  if (isRateLimited(ip)) {
+    return {
+      success: false,
+      message: "Recebemos vários envios seguidos. Respira um pouco e tenta novamente em instantes.",
+    };
+  }
+
   const parsed = userStorySchema.safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
