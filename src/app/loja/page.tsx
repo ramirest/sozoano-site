@@ -31,12 +31,13 @@ export default async function LojaPage() {
               key={String(product.slug || product.title)}
               className="flex flex-col overflow-hidden rounded-2xl border border-primary/20 bg-secondary/30"
             >
-              <div className="relative h-56">
+              {/* aspect fixo + object-contain: mostra a peça inteira (frente e costas) sem cortes */}
+              <div className="relative aspect-[4/5] bg-[#edeae2]">
                 <Image
                   src={String(product.image)}
                   alt={String(product.title)}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>

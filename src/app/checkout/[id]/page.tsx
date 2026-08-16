@@ -33,12 +33,12 @@ export default async function CheckoutPage({ params }: Props) {
 
       <div className="mt-8 grid gap-6 md:grid-cols-[320px_1fr]">
         <article className="h-fit overflow-hidden rounded-2xl border border-primary/20 bg-secondary/30">
-          <div className="relative h-64">
+          <div className="relative aspect-[4/5] bg-[#edeae2]">
             <Image
               src={String(product.image)}
               alt={String(product.title)}
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="(max-width: 768px) 100vw, 320px"
               unoptimized
             />
