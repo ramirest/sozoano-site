@@ -10,11 +10,11 @@ export function CareBanner() {
             <HeartPulse className="size-5" />
           </div>
           <h2 className="font-heading text-3xl">
-            O autor também cuida da sua <span className="golden-text">coluna</span>
+            O autor também cuida do seu <span className="golden-text">corpo</span>
           </h2>
           <p className="mt-2 text-sm text-foreground/80">
-            Dr. Rogério é fisioterapeuta e quiropraxista — e todo leitor tem desconto exclusivo
-            nos tratamentos. Gere seu voucher em segundos.
+            Dr. Rogério é fisioterapeuta e quiropraxista — coluna, sono e saúde integrativa. Todo
+            leitor tem desconto exclusivo nos tratamentos. Gere seu voucher em segundos.
           </p>
         </div>
         <Link
